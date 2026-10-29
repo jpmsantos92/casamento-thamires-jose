@@ -1,0 +1,65 @@
+SITE DO CASAMENTO DE THAMIRES E JOSÉ PEDRO
+Exportação: 29/10/2026. Fonte: commit 01b59b33dabf0f81560e010df9f33e34a5740558.
+
+O pacote contém o site completo, pronto para hospedagem estática.
+Não precisa instalar Node, executar npm ou compilar arquivos.
+
+ARQUIVOS
+index.html: conteúdo e estrutura.
+style.css: aparência, ajustes de celular e tamanhos.
+app.js: modais, animações e formulários.
+config.js: futuras configurações de Pix, cartão e Google Sheets.
+assets/: todas as imagens, os SVGs e as fontes Mourich.
+.nojekyll: indica publicação de arquivos estáticos no GitHub Pages.
+integrations/: script e instruções para conexão futura com Google Sheets.
+
+ATUALIZAR NO GITHUB PELO NAVEGADOR
+1. Faça um backup do repositório atual: Code > Download ZIP.
+2. Extraia este ZIP no computador. Não envie o ZIP ao repositório.
+3. Abra Settings > Pages no repositório e confira branch e pasta de publicação.
+4. Para publicar estes arquivos diretamente, use Deploy from a branch.
+   Se usar main / (root), index.html deve ficar na raiz da branch main.
+   Se usar /docs, coloque os arquivos dentro de docs, sem outra pasta intermediária.
+   Preserve a branch atual se ela já for a usada para hospedagem.
+5. Na aba Code, selecione a branch correta e entre na pasta de publicação.
+6. Clique Add file > Upload files. Arraste o CONTEÚDO extraído: index.html,
+   style.css, app.js, config.js, assets, .nojekyll, integrations e LEIA-ME.txt.
+   A pasta assets deve continuar sendo uma pasta, no mesmo nível de index.html.
+7. Confirme a alteração com a mensagem Atualiza site do casamento.
+   Se a branch exigir pull request, conclua a publicação por esse fluxo.
+8. Confira Settings > Pages: Deploy from a branch, branch e pasta corretas > Save.
+9. Aguarde a execução de Pages na aba Actions terminar e abra o endereço do site.
+   No Windows, use Ctrl+F5 para atualizar os arquivos em cache.
+
+IMPORTANTE
+- Preserve o arquivo CNAME e as configurações de domínio personalizado existentes.
+  Este ZIP não contém CNAME porque o domínio não foi informado.
+- Não é necessário apagar o repositório nem apagar todos os arquivos antigos.
+  Substitua os arquivos de mesmo nome. Não remova arquivos de outros projetos.
+- Se o site antigo usa GitHub Actions para compilar um framework, este pacote
+  dispensa esse build: configure Pages para publicar diretamente da branch.
+  Um workflow antigo que também publica Pages deve ser desativado para não
+  sobrescrever esta versão. Não remova outros workflows sem identificar sua função.
+- Se .nojekyll não aparecer ao selecionar os arquivos, crie-o no GitHub:
+  Add file > Create new file, nome .nojekyll, e salve (sem extensão .txt).
+
+O QUE JÁ FUNCIONA
+Layout responsivo, fontes locais, imagens, mapa incorporado, links do local,
+modais e animações conforme a rolagem.
+
+O QUE CONTINUA PENDENTE
+QR Code/chave Pix, link do cartão e endpoint do Google Apps Script ainda estão
+vazios em config.js. Os botões de pagamento/envio permanecem indisponíveis.
+O link de edição de uma planilha não basta para ativar o formulário.
+Consulte integrations/README.md para implantação e teste da integração.
+As fotos da história e seu texto continuam provisórios, como aprovado.
+A foto do cabeçalho também é provisória.
+
+VER NO COMPUTADOR
+Depois de extrair, abra index.html no navegador para revisar o visual.
+Mapa e recursos externos precisam de internet. A integração dos formulários
+quando ativada deve ser testada no endereço publicado, não apenas em file://.
+
+FONTES DAS INSTRUÇÕES DE PUBLICAÇÃO
+https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository
